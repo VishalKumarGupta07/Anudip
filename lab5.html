@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vishu's Restaurant</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836') no-repeat center center fixed;
+      background-size: cover;
+    }
+    header {
+      background: rgba(0,0,0,0.7);
+      color: #fff;
+      padding: 25px;
+      text-align: center;
+      font-size: 30px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+    }
+    .menu {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin: 50px;
+    }
+    .card {
+      background: rgba(255,255,255,0.95);
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+      width: 300px;
+      padding: 15px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .card img {
+      width: 100%;
+      border-radius: 12px;
+      height: 190px;
+      object-fit: cover;
+    }
+    .card h3 {
+      margin: 12px 0 5px;
+      font-size: 20px;
+      color: #222;
+    }
+    .card p {
+      font-size: 14px;
+      color: #555;
+      margin: 0 0 8px;
+    }
+    .price {
+      font-weight: bold;
+      margin-top: 8px;
+      color: #e91e63;
+      font-size: 16px;
+    }
+    iframe {
+      margin-top: 10px;
+      width: 100%;
+      height: 170px;
+      border: none;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    🍴 Welcome to Vishu’s Restaurant 🍴
+  </header>
+
+  <div class="menu">
+    <!-- Dish 1 -->
+    <div class="card">
+      <img src="https://www.dominos.co.in/files/items/Farmhouse.jpg" alt="Pizza Supreme">
+      <h3>Pizza Supreme</h3>
+      <p>Cheesy mozzarella, basil, capsicum, peppers & onions</p>
+      <div class="price">₹320</div>
+      <iframe src="https://www.youtube.com/embed/C9F5kMUfFKk" allowfullscreen></iframe>
+    </div>
+
+    <!-- Dish 2 -->
+    <div class="card">
+      <img src="https://www.cookwithmanali.com/wp-content/uploads/2014/09/Paneer-Tikka-Recipe.jpg" alt="Paneer Tikka">
+      <h3>Paneer Tikka</h3>
+      <p>Grilled paneer with spices, bell peppers & onions</p>
+      <div class="price">₹250</div>
+      <iframe src="https://www.youtube.com/embed/gfhxE6bqnyw" allowfullscreen></iframe>
+    </div>
+
+    <!-- Dish 3 -->
+    <div class="card">
+      <img src="https://www.cubesnjuliennes.com/wp-content/uploads/2020/01/Chicken-Biryani-Recipe.jpg" alt="Chicken Biryani">
+      <h3>Chicken Biryani</h3>
+      <p>Spicy chicken biryani with aromatic basmati rice</p>
+      <div class="price">₹350</div>
+      <iframe src="https://www.youtube.com/embed/tBto6vM2kIU" allowfullscreen></iframe>
+    </div>
+
+    <!-- Dish 4 -->
+    <div class="card">
+      <img src="https://www.cookingwithsiddhi.com/wp-content/uploads/2018/05/Masala-dosa.jpg" alt="Masala Dosa">
+      <h3>Masala Dosa</h3>
+      <p>Crispy dosa stuffed with spiced potato filling</p>
+      <div class="price">₹180</div>
+      <iframe src="https://www.youtube.com/embed/pHgVWY-j4lU" allowfullscreen></iframe>
+    </div>
+  </div>
+</body>
+</html>

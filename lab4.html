@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Survey Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #197e11;
+            display: flex;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        form {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            width: 400px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #2a53d5;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        .checkbox-group {
+            margin-top: 10px;
+        }
+
+        .checkbox-group input {
+            margin-right: 8px;
+        }
+
+        textarea {
+            height: 80px;
+        }
+
+        button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 10px;
+            background-color: #2a53d5;
+            color: white;
+            font-weight: bold;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #1f3bb3;
+        }
+    </style>
+</head>
+<body>
+
+    <form>
+        <h2>Survey Form</h2>
+
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="age">Age</label>
+        <input type="number" id="age" name="age" required>
+
+        <label for="recommend">Would you recommend this survey form to a friend?</label>
+        <select id="recommend" name="recommend">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+
+        <label>Languages and Frameworks Known:</label>
+        <div class="checkbox-group">
+            <input type="checkbox" id="html" name="languages" value="HTML">
+            <label for="html">HTML</label><br>
+
+            <input type="checkbox" id="css" name="languages" value="CSS">
+            <label for="css">CSS</label><br>
+
+            <input type="checkbox" id="js" name="languages" value="JavaScript">
+            <label for="js">JavaScript</label><br>
+
+            <input type="checkbox" id="react" name="languages" value="React">
+            <label for="react">React</label><br>
+
+            <input type="checkbox" id="angular" name="languages" value="Angular">
+            <label for="angular">Angular</label><br>
+        </div>
+
+        <label for="comments">Any comments or suggestions</label>
+        <textarea id="comments" name="comments"></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>
