@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Stopwatch</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #89f7fe, #66a6ff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      color: #333;
+    }
+
+    .stopwatch {
+      background: white;
+      padding: 30px 50px;
+      border-radius: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+
+    #display {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    button {
+      font-size: 1rem;
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      opacity: 0.8;
+    }
+
+    #start { background-color: #4CAF50; color: white; }
+    #stop { background-color: #f44336; color: white; }
+    #reset { background-color: #2196F3; color: white; }
+  </style>
+</head>
+<body>
+
+  <div class="stopwatch">
+    <div id="display">00:00:00</div>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <button id="reset">Reset</button>
+  </div>
+
+  <script>
+    let timer;
+    let seconds = 0;
+    let running = false;
+
+    function updateDisplay() {
+      let hrs = Math.floor(seconds / 3600);
+      let mins = Math.floor((seconds % 3600) / 60);
+      let secs = seconds % 60;
+
+      document.getElementById("display").textContent =
+        `${hrs.toString().padStart(2, '0')}:${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+    }
+
+    document.getElementById("start").addEventListener("click", () => {
+      if (!running) {
+        running = true;
+        timer = setInterval(() => {
+          seconds++;
+          updateDisplay();
+        }, 1000);
+      }
+    });
+
+    document.getElementById("stop").addEventListener("click", () => {
+      running = false;
+      clearInterval(timer);
+    });
+
+    document.getElementById("reset").addEventListener("click", () => {
+      running = false;
+      clearInterval(timer);
+      seconds = 0;
+      updateDisplay();
+    });
+  </script>
+
+</body>
+</html>
